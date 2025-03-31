@@ -1,13 +1,17 @@
+#include <stdbool.h>
 #include <stdio.h>
-#include <string.h>
+#include "parsexec.c"
 
-int main() {
-    char str[] = "Hello, World!";
-    int length = strlen(str);
-
-    for (int i = 0; i < length; i++) {
-        printf("Character at index %d: %c\n", i, str[i]);
-    }
-
-    return 0;
+static char input[100] = "look around";
+static bool getInput(void)
+{
+   printf("\n--> ");
+   return fgets(input, sizeof input, stdin) != NULL;
+}
+int main()
+{
+   printf("Welcome to Little Cave Adventure.\n");
+   while (parseAndExecute(input) && getInput());
+   printf("\nBye!\n");
+   return 0;
 }
