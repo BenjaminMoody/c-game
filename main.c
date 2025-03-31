@@ -10,7 +10,9 @@ static bool getInput(void)
 }
 int main()
 {
-   printf("Welcome to Little Cave Adventure.\n");
+   printf("You wake up. Its a small room, a basket of dirty clothes holds the bathroom door open.\n");
+   printf("The blind is down but the sunlight hits your eyes just as you sit up, not nice.\n");
+   printf("A phone on the small table to your left plays music very quitly.\n");
    while (parseAndExecute(input) && getInput());
    printf("\nBye!\n");
    return 0;
