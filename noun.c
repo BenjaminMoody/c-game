@@ -20,3 +20,25 @@ static OBJECT *getObject(const char *noun)
     }
     return res;
 }
+
+OBJECT *getVisable(const char *intention, const char *noun)
+{
+    OBJECT *obj = getObject(noun);
+    if (obj == NULL)
+    {
+        printf("The word %s means nothing", intention);
+    }
+    else if (!(obj == player ||
+obj == player->location||
+obj->location == player ||
+obj->location == player->location ||
+obj->location == NULL ||
+obj->location->location == player ||
+obj->location->location == player->location))
+    {
+        printf("No %s found", noun);
+        obj == NULL;
+    }
+
+    return obj;
+}

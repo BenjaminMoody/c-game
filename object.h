@@ -14,7 +14,7 @@ typedef struct object {
 #define key (objs + 5)
 #define clothes (objs + 6)
 #define bag (objs + 7)
-#define yourself (objs + 8)
+#define player (objs + 8)
 #define phone (objs + 9)
 
  #define endOfObjs (objs + 10)

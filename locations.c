@@ -1,27 +1,19 @@
 #include <stdio.h>
 #include <string.h>
-
-struct locations 
-{
-    const char *description;
-    const char *tag;
-}
-
-locations[] = {
-    {"in your bed", "bed"},
-    {"next to your dirty clothes basket", "basket"},
-    {"by the window", "window"},
-    {"just out the door", "door"}
-};
-
-#define numberOfLocations (sizeof locations / sizeof *locations)
-static unsigned locationOfPlayer = 0;
+#include "object.h"
+#include "misc.h"
+#include "noun.h"
 
 void executeLook(const char *noun)
 {
     if (noun != NULL && strcmp(noun, "around") == 0)
     {
-        printf("you are %s.\n", locations[locationOfPlayer].description);
+        printf("you are %s.\n", player->location->description);
+        listObjectsAtLocation(player->location);
+    }
+    else
+    {
+        printf("you're eyes dont find anything of interest.\n")
     }
 }
 
