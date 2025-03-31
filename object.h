@@ -6,9 +6,9 @@ typedef struct object {
 
  extern OBJECT objs[];
 
- #define room (objs + 0)
- #define basket (objs + 1)
- #define window (objs + 2)
+#define room (objs + 0)
+#define basket (objs + 1)
+#define window (objs + 2)
 #define desk (objs + 3)
 #define door (objs + 4)
 #define key (objs + 5)

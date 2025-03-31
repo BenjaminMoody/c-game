@@ -3,9 +3,9 @@
 #include <string.h>
 #include "object.h"
 
-static bool objectHasTag(OBJECT *object, const char *tag)
+static bool objectHasTag(OBJECT *obj, const char *noun)
 {
-    return noun != NULL && *noun != '\\0' && strcmp(noun, obj->tag) == 0;
+    return noun != NULL && *noun != '\0' && strcmp(noun, obj->tag) == 0;
 }
 
 static OBJECT *getObject(const char *noun)
@@ -21,7 +21,7 @@ static OBJECT *getObject(const char *noun)
     return res;
 }
 
-OBJECT *getVisable(const char *intention, const char *noun)
+OBJECT *getVisible(const char *intention, const char *noun)
 {
     OBJECT *obj = getObject(noun);
     if (obj == NULL)
