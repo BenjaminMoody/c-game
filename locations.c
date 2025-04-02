@@ -59,7 +59,7 @@ void doGo(const char *noun)
     printf("You try to go %s.\n", noun);
     for (int i = 0; i < numLocations; i++)
     {
-        if (noun != NULL && strcmp(noun, locations[locationOfPlayer].name) == 0)
+        if (noun != NULL)
         {
             for  (int j; j < sizeof locations[i].ids; j++)
             {
