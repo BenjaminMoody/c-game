@@ -32,13 +32,12 @@ Items items[] =
     {0, "Your phone lets you know its about time to go to class.", "phone"},
     {1, "You brush your teeth. It's not enjoyable, but at least others will percieve you better.", "toothbrush"},
     {2, "You find some food, guilt racks through you but your stomach lets you ignore it.", "food"},
-
 };
 
 static char itemsInInventory[200][40]; // Array to hold items in inventory
 
-#define numLocations (sizeof(locations) / sizeof(locations[0]))
-#define numItems (sizeof(items) / sizeof(items[0]))
+#define numLocations (sizeof locations / sizeof locations[0] )
+#define numItems (sizeof items  / sizeof items[0] )
 
 void doLook(const char *noun)
 {
@@ -59,16 +58,14 @@ void doGo(const char *noun)
     printf("You try to go %s.\n", noun);
     for (int i = 0; i < numLocations; i++)
     {
-        if (noun != NULL)
+        int j = 0;
+        for  (j; j < sizeof locations[i].ids / sizeof locations[i].ids[0]; j++)
         {
-            for  (int j; j < sizeof(locations[i].ids); j++)
+            if (locations[i].ids[j] == locationOfPlayer && strcmp(locations[i].name, noun) == 0 && noun != NULL)
             {
-                if (locations[i].ids[j] == locationOfPlayer && strcmp(locations[i].name, noun) == 0)
-                {
-                    locationOfPlayer = locations[i].id;
-                    printf("%s\n", locations[i].description);
-                    return;
-                }
+                locationOfPlayer = locations[i].id;
+                printf("%s\n", locations[i].description);
+                return;
             }
         }    
     }
