@@ -29,6 +29,10 @@ bool parseAndExecute(char *input)
       {
          doGrab(noun);
       }
+      else if (strcmp(verb, "talk") == 0)
+      {
+         doTalk(noun);
+      }
       else
       {
          printf("What even is '%s'.\n", verb);
