@@ -1,1 +1,0 @@
-extern OBJECT *getVisabile(const char *intention, const char *noun);
