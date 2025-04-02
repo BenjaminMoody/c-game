@@ -21,7 +21,7 @@ bool parseAndExecute(char *input)
       }
       else if (strcmp(verb, "go") == 0)
       {
-         printf("It's too dark to go anywhere.\n");
+         doGo(noun);
       }
       else
       {
