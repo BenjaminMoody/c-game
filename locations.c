@@ -63,7 +63,7 @@ void doGo(const char *noun)
         {
             for  (int j; j < sizeof(locations[i].ids); j++)
             {
-                if (locations[i].ids[j] == locationOfPlayer)
+                if (locations[i].ids[j] == locationOfPlayer && strcmp(locations[i].name, noun) == 0)
                 {
                     locationOfPlayer = locations[i].id;
                     printf("%s\n", locations[i].description);
