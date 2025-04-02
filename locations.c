@@ -61,7 +61,7 @@ void doGo(const char *noun)
     {
         if (noun != NULL)
         {
-            for  (int j; j < sizeof locations[i].ids; j++)
+            for  (int j; j < sizeof(locations[i].ids); j++)
             {
                 if (locations[i].ids[j] == locationOfPlayer)
                 {
