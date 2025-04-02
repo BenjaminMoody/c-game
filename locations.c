@@ -70,7 +70,7 @@ void doGo(const char *noun)
 
 void doGrab(const char *noun)
 {
-    if (noun != NULL && noun, items[locationOfPlayer].name == 0 && locationOfPlayer == items[locationOfPlayer].id)
+    if (noun != NULL && strcmp(noun, items[locationOfPlayer].name == 0) && locationOfPlayer == items[locationOfPlayer].id)
     {
         printf("%s\n", items[locationOfPlayer].description);
         return;
