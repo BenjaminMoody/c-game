@@ -11,6 +11,7 @@ bool parseAndExecute(char *input)
    char *noun = strtok(NULL, " \n");
    if (verb != NULL)
    {
+      
       if (strcmp(verb, "quit") == 0)
       {
          return false;
@@ -23,9 +24,13 @@ bool parseAndExecute(char *input)
       {
          doGo(noun);
       }
+      else if (strcmp(verb, "grab") == 0)
+      {
+         doGrab(noun);
+      }
       else
       {
-         printf("I don't know how to '%s'.\n", verb);
+         printf("What even is '%s'.\n", verb);
       }
    }
    return true;
