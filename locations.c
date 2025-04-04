@@ -37,15 +37,15 @@ Location locations[] = //the array of locations of structure Location
     {5, "\nYou head to the class of the time. You make it just in time.\nThe lecturer drones on about something you should be interested in.\nYou have a notebook infront of you, Eisso and Noel sit near you.", "class", {7}},
     {6, "\n*plop*\n\n*wipe?*", "toilet", {0, 1}},
     {7, "\nYou arive on time here, mainly because you're following Noel and Eisso.\nOn the way Pottap and Dinoel join your group!\nBefore the class you go to the shop", "robotics", {8}},
-    {8, "\nGoing into the shop there are many items like food, energy drinks and hot chocolate sachets.\n\nNoel- 'Lets be quick to get to the grid'", "shop", {9}},
-    {9, "\n", "grid", {31}},
-    {10, "\n", "walk", {31}},
-    {11, "\n", "", {31}},
-    {12, "\n", "", {31}},
-    {13, "\n", "", {31}},
-    {14, "\n", "", {31}},
-    {15, "\n", "", {31}},
-    {16, "\n", "", {31}},
+    {8, "\nGoing into the shop there are many items like water, energy drinks and hot chocolate sachets.\n\nNoel- 'Lets be quick to get to the grid'", "shop", {9}},
+    {9, "\nEntering the grid feels welcoming and familiar. A class for robotics goes on that you enjoy quite well, the lecturer is good and covers the topic in depth.\nNareik explains a concept.\n, no more game, unfinihed, sorry", "grid", {31}},
+    {10, "\nYou leave life and go into the deep woods. Your troubles fall away under the crunch of drying leaves\nThere are many paths out here.\nleft or right\n", "walk", {11, 12}},
+    {11, "\nYou walk left, the path is narrow and the trees are close together.\nYou can see a small clearing up ahead.\n", "left", {13}},
+    {12, "\nYou walk right, the path is wide and the trees are far apart.\nYou can see a small clearing up ahead.\n", "right", {14}},
+    {13, "\nThe path opens up to a small clearing surrounded by the dense woods, a ladder extends directly upwards,\nyou could go back to the hall \n", "clearing", {2 ,15}},
+    {14, "\nThe path opens up to a large clearing barely perceptable from how far the trees are apart, a deer sits in the middle.\nIt has a table and tea set ready for you\n", "clearing", {16}},
+    {15, "\nunfinished, sorry", "ladder", {31}},
+    {16, "\nunfinished sorry", "deer", {31}},
     {17, "\n", "", {31}},
     {18, "\n", "", {31}},
     {19, "\n", "", {31}},
@@ -71,6 +71,10 @@ Items items[] =
     {3, "\nYou find some food, guilt racks through you but your stomach lets you ignore it.", "food"},
     {4, "\nOh NICE, you found a cool bug.\nIt's a queen ant, it still has it's wings so it hasnt found a mate or suitable place to start a nest...", "bug"},
     {5, "\nYou doodle in your notebook,\n..........................:++=++*+:..................................\n........................:+==--:::::=-................................\n........................+---::::::::-=...............................\n.......................:-:::::::::::-=:..............................\n.......................=::::::::::::-=-..............................\n.......................+-:::::::::::-=:..............................\n...............::--::.=--::::::::::--+...............................\n..........-++++======+++++-::::::---=:...............................\n.......-*=======-==========++----==+:................................\n.....=++==----------------:-=+*+++:..:--=---==-----:.................\n...:++==-----:::::::::::::::::==+-==-----=@%#*%+--::----.............\n..-+==------::::::::::::::::::::=++--:::+#-:::::::::-------..........\n.-===-----::::=--::::::::::::::::-+-::::::::::::::::::::*%%%*:.......\n:+==-----::::::::::-=-::::::::::::=+::::::::::::::::::::::-+%*=......\n====---::::::::::::::::=+:::::::---+::::::===-:::::::::::::-*+==-....\n+==----:::::::::::::::::::==::----=+-:::-:-::::-::::::::::::--===-...\n+==----::::::::::::::::::::::*:--==+:::-:..=-...-::::-=--===:--====..\n++=----::::::::::::::::::::::--+--+::::-.+:=##:.::::-::--.::=--===+-.\n===----::::+*-::::::::::::::::--+:::-=:::#@@@#=.::::-*:=%#...--==+++:\n:+==----::::::::==:::::::::::::-=--==-::-*%-+#:.-:::=*#@@#*..-====++-\n.====----::::::::::-+::::::::::-=-::::::::==-::-:::::#%-=#:.:-====++=\n..+===-----:::::::::::+-::-----=+-::-==:::::---::::::-=+=:..:===+++++\n...=+===-----:::::::::--*----=++----::=:::::-:::::::::--:===+**++++++\n.....++===-----::::::::--++++===------:%=:::::::::::::-=---===+++++++\n.......=+======--------==+++++===------*@=+-::::::::------=+**+=++++-\n..........=+++=+======++*+++++=====-----%@=:.:==-------==+*+++++++++:\n..............:-=+==--++++++========----+@@%:.:..::-:#%#+++++++++++=.\n......................:+=+============---*#%@@#=---=%%*=++++++++++=:.\n.......................:=====----------==+***%%%%%%%%%++++++++++++:..\n........................:==----::::-----==+%%%%%%%%%%*+++++++++++....\n..........................---:::::::::---===*%%%%%%%+++++++++++:.....\n...........................:-::::::::::--=====+++++++++++++++=.......\n..............................:::::::::--=====++++++++++++=:.........\n................................:--:::----===++++++++++=-............\n.....................................:--====++++++==::...............\n Eisso comments that your drawings are wierd.\nA previous note says you're next class is robotics", "notebook"},
+    {8, "\nYou find a hot chocolate sachet, you could eat this later.\nEisso- 'Can I have one?'\nYou- 'Take one yourself!'", "hot chocolate"},
+    {8, "\nYou buy the energy drink, too many of these and you might die.\nNoel- '!?'", "energy drink"},
+    {8, "\nYou buy a bottle of water, this is way healthier than the energy drink.\n", "water"},
+
 };
 
 People people[] = 
@@ -78,7 +82,7 @@ People people[] =
     {0, {"\nYou- 'Hi'\nEisso- 'Damn bro, I thought you were gonna miss this one as well. Good job making it here'\nYou- 'Yeah, the bed misses me tho'",}, "Eisso", {5}, {"\nYou- 'Hi'\nEisso- 'Damn bro, I thought you were gonna miss this one as well. Good job making it here'\nYou- 'Yeah, I found this cool bug!'\nYou look for the bug but cant find it...\nYou- 'Oh well, I lost it'\nEisso- 'Good'", "bug"}},
     {1, {"\nYou- 'I made it'\n~~~ooo\nNoel- 'Yeah, you look like shit'\nYou- 'I didn't have time to brush my hair, I also barely slept'"}, "Noel", {5}, {"\nYou- 'I made it'\n~~~ooo\nNoel- 'Yeah, he's already started...'\nYou- 'I didn't have time to brush my hair, I also barely slept. But i brushed my teeth!'", "toothbrush"}},
     {2, {"\nNoel- 'C'mon, we need to be quick!'"}, "Noel", {8}, {"\nNoel- 'You already have food, we can go now, Right?'\n", "food"}},
-    {3, {""},"",{4},{"",""}},
+    {3, {"\nNareik- 'Hey, when is that report you owe me comming?'\nYou- Sorry Nareik, I'm having trouble with, well... a lot.'\nNareik- 'Well, get on with it.'\n"},"Nareik",{9},{"\nNareik- 'Hey, when is that report you owe me c'---\nYOUR ALARM GOES OFF\nYou- 'Sorry about that'\n","phone"}},
 };
 
 //defining lengths of all content arrays, define lets this happen during compile time
